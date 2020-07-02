@@ -72,7 +72,7 @@ func HandleRequest(ctx context.Context, proxyRequest events.APIGatewayProxyReque
 	}
 
 	res := RegisterLinkResponse{
-		ShortenedLink: fmt.Sprintf("https://9j7hmlvutl.execute-api.eu-west-1.amazonaws.com/%v", hash),
+		ShortenedLink: fmt.Sprintf("https://1cpmx32uyj.execute-api.eu-west-1.amazonaws.com/%v", hash),
 	}
 
 	resStr, err := json.Marshal(res)
