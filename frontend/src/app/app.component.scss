@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+mat-card-content div {
+  flex-flow: column;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+  color: white;
+}

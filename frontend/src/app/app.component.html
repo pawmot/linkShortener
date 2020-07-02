@@ -1,7 +1,31 @@
-<div *ngIf="!shortened">
-  <input type="text" [(ngModel)]="link">
-  <button mat-flat-button color="primary" (click)="shorten()">Shorten</button>
-</div>
-<div *ngIf="shortened">
-  {{shortenedLink}}
+<!--<div *ngIf="!shortened" class="container">-->
+<!--  <input type="text" [(ngModel)]="link">-->
+<!--  <button mat-flat-button color="primary" (click)="shorten()">Shorten</button>-->
+<!--</div>-->
+<!--<div *ngIf="shortened">-->
+<!--  {{shortenedLink}}-->
+<!--</div>-->
+
+<div class="container">
+  <mat-card layout="row" layout-align="center center">
+    <mat-card-header>
+        <h1>Link Shortener</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <mat-form-field>
+          <mat-label>Enter the link to shorten</mat-label>
+          <input matInput type="text" [(ngModel)]="link">
+          <button mat-button [disabled]="!link" matSuffix (click)="shorten()" color="primary">Shorten</button>
+        </mat-form-field>
+        <div *ngIf="shortened">
+          <a [href]="shortenedLink">Navigate to shortened link</a>
+          <button mat-button mat-icon-button (click)="copy()"
+                  matTooltip="Copy the shortened link" color="accent">
+            <mat-icon>content_copy</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>
