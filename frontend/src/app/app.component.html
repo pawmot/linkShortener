@@ -1,0 +1,7 @@
+<div *ngIf="!shortened">
+  <input type="text" [(ngModel)]="link">
+  <button mat-flat-button color="primary" (click)="shorten()">Shorten</button>
+</div>
+<div *ngIf="shortened">
+  {{shortenedLink}}
+</div>
