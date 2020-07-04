@@ -26,6 +26,8 @@
     "@aws-cdk/aws-lambda": "1.49.1",
     "@aws-cdk/aws-apigatewayv2": "1.49.1",
     "@aws-cdk/aws-dynamodb": "1.49.1",
+    "@aws-cdk/aws-elasticache": "1.49.1",
+    "@aws-cdk/aws-ec2": "1.49.1",
     "source-map-support": "^0.5.19"
   }
 }
