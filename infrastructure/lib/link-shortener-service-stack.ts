@@ -70,7 +70,7 @@ export class LinkShortenerServiceStack extends cdk.Stack {
         let cache = new elasticache.CfnCacheCluster(this, "linksCache", {
             engine: "memcached",
             cacheNodeType: "cache.t3.micro",
-            numCacheNodes: 3,
+            numCacheNodes: 1,
             cacheSubnetGroupName: cacheSubnetGroup.cacheSubnetGroupName,
             vpcSecurityGroupIds: [sg.securityGroupId]
         });
